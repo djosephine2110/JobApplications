@@ -17,7 +17,7 @@
             <div class="form-group col-md-6">
               <label for="inputPassword4">Penilaian</label>
               <select id="inputState" name="rating" class="form-control">
-                <option selected>{{$skill->rating}}</option>
+                <option value="{{$skill->rating}}" selected>{{$skill->rating}}</option>
                 <option value="Sangat Baik">Sangat Baik</option>
   
                 <option value="Baik">Baik</option>

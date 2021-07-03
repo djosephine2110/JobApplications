@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
         body {
-            font-size: 17px;
+            font-size: 12px;
 
         }
 
@@ -29,84 +29,30 @@
 <body>
     <div class="container">
         <br>
-        <img src="{{asset('/images/' . $user->images->image)}}" alt="" class="img-thumbnail rounded mx-auto d-block" style="max-width: 200px;" >
         <br>
+        <img src="{{asset('/images/' . $user->images->image)}}" alt="" class="img-thumbnail d-flex justify-content-right" style="max-width: 200px; float:right; margin-top:10%;" >
+
         <section class="heading">
             @foreach($user->details as $e)
             <h2 class="text-center"><b>Application of {{$e->name}}</b></h2>
 
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="name">Name:</label> {{$e->name}}
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="ktp">KTP:</label> {{$e->ktp}}
-                </div>
-              </div>
-        
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="birth_place">Tempat Lahir: </label>{{$e->birth_place}}
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="dob">Tanggal Lahir: </label> {{$e->dob}}
-                </div>
-              </div>
-        
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="gender">Jenis Kelamin :</label> {{$e->gender}}
-                  <br>
-                  
-                  
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="religion">Agama: </label> {{$e->religion}}
-                               
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="address">Alamat: </label> {{$e->address}}
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="zipcode">Kode Pos: </label> {{$e->zipcode}}
-                </div>
-              </div>
-        
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="phone">Nomor Telepon: </label> {{$e->phone}}
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="home_number">Telepon Rumah: </label> {{$e->home_number}}
-                </div>
-              </div>
-        
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="sim_a">SIM A: </label> {{$e->sim_a}}
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="sim_c">SIM C: </label> {{$e->sim_c}}
-                </div>
-              </div>
-            
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="vehicle">Kendaraan: </label> {{$e->vehicle}}
-                 
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="hobby">Hobi: </label> {{$e->hobby}}
-                </div>
-              </div>
+            <p><b>Nama Lengkap:</b> {{$e->name}} </p>
+            <p><b>KTP:</b> {{$e->ktp}}</p>
+            <p><b>Tempat Lahir: </b> {{$e->birth_place}}</p>
+            <p><b>Tanggal Lahir:</b> {{$e->dob}} </p>
+            <p><b>Jenis Kelamin:</b> {{$e->gender}} </p>
+            <p><b>Agama:</b> {{$e->religion}}</p>
+            <p><b>Alamat:</b> {{$e->address}}</p>
+            <p><b>Kode Pos:</b> {{$e->zipcode}}</p>
+            <p><b>Telepon 1:</b> {{$e->phone}}</p>
+            <p><b>Telepon 2:</b> {{$e->home_number}}</p>
+            <p><b>SIM A:</b> {{$e->sim_a}}</p>
+            <p><b>SIM C:</b> {{$e->sim_c}}</p>
+            <p><b>Kendaraan:</b> {{$e->vehicle}}</p>
+            <p><b>Kegemaran:</b> {{$e->hobby}}</p>
 
-
-            
-
-
-@endforeach
+            <br>
+            @endforeach
 
         </section>
 
@@ -117,43 +63,195 @@
 
             @foreach($user->education as $e)
 
-            <h4> Degree: {{$e->degree}}</h4>
+            <p style="font-size: 15px;"><b>{{$e->degree}} ({{$e->graduation_start_date}} - {{$e->graduation_end_date}})</b></p>
 
-            <p>Nama Institusi: {{$e->school_name}} </p>
-            <p>Alamat: {{$e->school_location}}</p>
-            <p>Jurusan:  {{$e->field_of_study}}</p>
-            <p>Start Date: {{$e->graduation_start_date}} </p>
-            <p>Graduation Date: {{$e->graduation_end_date}} </p>
+            <p><b>Nama Institusi: </b>{{$e->school_name}} </p>
+            <p><b>Alamat: </b>{{$e->school_location}}</p>
+            <p><b>Jurusan:  </b>{{$e->field_of_study}}</p>
+            
             <br>
             @endforeach
         </section>
 
+        <section class="foreign">
+
+          <h2><b>Bahasa Asing</b></h2>
+
+          @foreach($user->asings as $e)
+
+          <p style="font-size: 15px;"><b>{{$e->language}}</b></p>
+
+          <p><b>Bicara: </b>{{$e->speaking}} </p>
+          <p><b>Membaca: </b>{{$e->reading}}</p>
+          <p><b>Menulis:  </b>{{$e->writing}}</p>
+          
+          <br>
+          @endforeach
+      </section>
+
+      <section class="skills">
+
+        <h2><b>Keahlian Lainnya</b></h2>
+
+        @foreach($user->skills as $skill)
+        <p style="font-size: 15px;"> <b>{{$skill->name}}</b></p>
+        <p><b>Penilaian: </b>{{$skill->rating}}</p>
+        @endforeach
+    </section>
 
         <section class="work">
 
-            <h2>Pengalaman Kerja</h2>
+            <h2><b>Pengalaman Kerja</b></h2>
 
             @foreach($user->experiences as $work)
-            <h3>
-                Job Title: {{$work->job_title}}
-            </h3>
-            <p>Employer: {{$work->employer}} </p>
-            <p>Start Date: {{$work->start_date}} </p>
-            <p>End Date: {{$work->end_date}} </p>
+            <p style="font-size: 15px;"><b>
+                {{$work->company_name}} ({{$work->from}} - {{$work->to}})
+            </b></p>
+            <p><b>Jabatan: </b>{{$work->position}} </p>
+            <p><b>Gaji: </b>{{$work->salary}} </p>
+            <p><b>Alasan Keluar: </b>{{$work->reason}} </p>
+            <p><b>Deskripsi Pekerjaan: </b>{{$work->description}}</p>
             @endforeach
         </section>
 
+        <section class="Nikah">
 
+          <h2><b>Status Pernikahan</b></h2>
 
-        <section class="skills">
+          @foreach($user->marrieds as $m)
+          
+          <p><b>Status: </b>{{$m->married_status}} </p>
+          <p><b>Nama Pasangan: </b>{{$m->spouse_name ?? 'tidak ada'}}  </p>
+          <p><b>Tempat Lahir: </b>{{$m->spouse_bplace ?? 'tidak ada'}} </p>
+          <p><b>Tanggal Lahir: </b>{{$m->spouse_dob ?? 'tidak ada'}}</p>
+          <p><b>Pendidikan: </b>{{$m->spouse_education ?? 'tidak ada'}}</p>
+          <p><b>Pekerjaan: </b>{{$m->spouse_job ?? 'tidak ada'}}</p>
 
-            <h2>Skills</h2>
+          @endforeach
+      </section>
 
-            @foreach($user->skills as $skill)
-            <h4> {{$skill->name}} ({{$skill->rating}} out of 5)</h4>
-            @endforeach
-        </section>
+      <section class="Anak">
 
+        <h2><b>Anak</b></h2>
+
+        @foreach($user->anaks as $m)
+        
+        <p><b>Nama Anak: </b>{{$m->name}} </p>
+        <p><b>Jenis Kelamin: </b>{{$m->gender ?? 'tidak ada'}}  </p>
+        <p><b>Tanggal Lahir: </b>{{$m->dob ?? 'tidak ada'}} </p>
+        <p><b>Pendidikan: </b>{{$m->education ?? 'tidak ada'}}</p>
+        
+
+        @endforeach
+    </section>
+        
+
+    <section class="Relasi">
+
+        <h2><b>Relasi</b></h2>
+
+        @foreach($user->relations as $m)
+        
+        <p><b>Nama:</b> {{$m->name}} </p>
+        <p><b>Hubungan:</b> {{$m->relationship ?? 'tidak ada'}}  </p>
+        <p><b>Tanggal Lahir:</b> {{$m->dob ?? 'tidak ada'}} </p>
+        <p><b>Pekerjaan:</b> {{$m->job ?? 'tidak ada'}}</p>
+        
+
+        @endforeach
+    </section>
+        
+
+    <section class="Organisasi">
+
+        <h2><b>Organisasi</b></h2>
+
+        @foreach($user->organizations as $m)
+        
+        <p style="font-size: 15px;"><b>{{$m->name}} ({{$m->from}} - {{$m->to}})</b></p>
+        <p><b>Alamat: </b>{{$m->address ?? 'tidak ada'}}  </p>
+        <p><b>Jabatan: </b>{{$m->position ?? 'tidak ada'}} </p>
+        <br>
+        
+
+        @endforeach
+    </section>
+
+    <section class="Data Kesehatan">
+
+        
+
+        @foreach($user->healths as $m)
+        
+        <p><b>Golongan Darah: </b>{{$m->blood_type ?? 'tidak ada'}}  </p>
+        <p><b>Penyakit Ringan: </b>{{$m->light_disease ?? 'tidak ada'}} </p>
+        <p><b>Penyakit Berat: </b>{{$m->heavy_disease ?? 'tidak ada'}} </p>
+        <p><b>Pernah Dirawat: </b>{{$m->opname ?? 'tidak ada'}} </p>
+        <p><b>Alasan Dirawat: </b>{{$m->alasan ?? 'tidak ada'}} </p>
+        <p><b>Pengelihatan: </b>{{$m->eyesight ?? 'tidak ada'}} </p>
+        <p><b>Pendengaran: </b>{{$m->hearing ?? 'tidak ada'}} </p>
+        <p><b>Kesehatan: </b>{{$m->health ?? 'tidak ada'}} </p>
+        <hr>
+        <p>Kontak Darurat</p>
+        <p><b>Nama: </b>{{$m->name ?? 'tidak ada'}} </p>
+        <p><b>Alamat: </b>{{$m->address ?? 'tidak ada'}} </p>
+        <p><b>Kode Pos: </b>{{$m->zipcode ?? 'tidak ada'}} </p>
+        <p><b>Nomor Telepon: </b>{{$m->phone ?? 'tidak ada'}} </p>
+        <p><b>Hubungan: </b>{{$m->relation ?? 'tidak ada'}} </p>
+
+        <br>
+        
+
+        @endforeach
+    </section>
+    <section class="Referensi">
+
+        <h2><b>Referensi</b></h2>
+
+        @foreach($user->references as $m)
+        
+        <p style="font-size: 15px;"><b>{{$m->name}}</b></p>
+        <p><b>Alamat: </b>{{$m->address ?? 'tidak ada'}}  </p>
+        <p><b>Nomor Telepon: </b>{{$m->phone ?? 'tidak ada'}}</p>
+        <p><b>Jabatan: </b>{{$m->position ?? 'tidak ada'}} </p>
+        <br>
+        
+
+        @endforeach
+    </section>
+
+    <section class="Connection">
+
+        <h2><b>Rekomendasi Dari Perusahaan</b></h2>
+
+        @foreach($user->connections as $m)
+        
+        <p style="font-size: 15px;"><b>{{$m->name}}</b></p>
+        <p><b>Jabatan: </b>{{$m->position ?? 'tidak ada'}} </p>
+        <p><b>Hubungan: </b>{{$m->relationship ?? 'tidak ada'}}</p>
+        <br>
+        
+
+        @endforeach
+    </section>
+
+    <section class="Connection">
+
+        <h2><b>Informasi Pekerjaan Yang Dilamar</b></h2>
+
+        @foreach($user->connections as $m)
+        
+        <p style="font-size: 15px;"><b>{{$m->job_name}}</b></p>
+        <p><b>Jabatan yang diinginkan: </b>{{$m->job_position ?? 'tidak ada'}} </p>
+        <p><b>Gaji yang diharapkan: </b>{{$m->job_salary ?? 'tidak ada'}}</p>
+        <p><b>Fasilitas yang diharapkan: </b>{{$m->job_facilities ?? 'tidak ada'}}</p>
+        <p><b>Kapan dapat mulai bekerja: </b>{{$m->job_starts ?? 'tidak ada'}}</p>
+
+        <br>
+        
+
+        @endforeach
+    </section>
     </div>
 </body>
 

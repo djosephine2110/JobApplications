@@ -37,7 +37,7 @@
 
 
 <div class="text-right">
-    <a class=" btn btn-primary mt-3" href=" {{route('skill.index')}} " role="button">Next</a>
+    <a class=" btn btn-primary mt-3" href=" {{route('connection.index')}} " role="button">Next</a>
 </div>
 
 

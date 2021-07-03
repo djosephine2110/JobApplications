@@ -38,6 +38,8 @@ Route::resource('married', 'MarriedController')->middleware('auth');
 Route::resource('health', 'HealthController')->middleware('auth');
 
 Route::resource('education', 'EducationController')->middleware('auth');
+Route::resource('anak', 'AnakController')->middleware('auth');
+Route::resource('connection', 'ConnectionController')->middleware('auth');
 
 Route::resource('experience', 'ExperienceController')->middleware('auth');
 Route::resource('organization', 'OrganizationController')->middleware('auth');

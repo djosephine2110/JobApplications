@@ -57,7 +57,7 @@
                 <div class="form-group col-md-6">
                   <label for="religion">Agama</label>
                   <select id="inputState" class="form-control" name="religion">
-                    <option value="">Choose...</option>
+                    <option value="{{$userDetail->religion}}">{{$userDetail->religion}}</option>
                     <option value="Islam">Islam</option>
                     <option value="Kristen">Kristen</option>
                     <option value="Katolik">Katolik</option>
@@ -71,33 +71,33 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="address">Alamat</label>
-                  <input type="text" class="form-control" name="address" id="address" placeholder="Alamat">
+                  <input type="text" class="form-control" name="address" id="address" value="{{$userDetail->address}}">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="zipcode">Kode Pos</label>
-                  <input type="text" class="form-control" name="zipcode" id="zipcode" placeholder="Kode Pos">
+                  <input type="text" class="form-control" name="zipcode" id="zipcode" value="{{$userDetail->zipcode}}">
                 </div>
               </div>
         
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="phone">Nomor Telepon</label>
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Telepon 1">
+                  <input type="text" class="form-control" name="phone" id="phone" value="{{$userDetail->phone}}">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="home_number">Telepon Rumah</label>
-                  <input type="text" class="form-control" name="home_number" id="home_number" placeholder="Telepon 2">
+                  <input type="text" class="form-control" name="home_number" id="home_number" value="{{$userDetail->home_number}}">
                 </div>
               </div>
         
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="sim_a">SIM A</label>
-                  <input type="text" class="form-control" name="sim_a" id="sim_a" placeholder="SIM A">
+                  <input type="text" class="form-control" name="sim_a" id="sim_a" value="{{$userDetail->sim_a}}">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="sim_c">SIM C</label>
-                  <input type="text" class="form-control" name="sim_c" id="sim_c" placeholder="SIM C">
+                  <input type="text" class="form-control" name="sim_c" id="sim_c" value="{{$userDetail->sim_c}}">
                 </div>
               </div>
             
@@ -105,7 +105,7 @@
                 <div class="form-group col-md-6">
                   <label for="vehicle">Kendaraan</label>
                   <select id="inputState" class="form-control" name="vehicle">
-                    <option value="">Choose...</option>
+                    <option value="{{$userDetail->vehicle}}">{{$userDetail->vehicle}}</option>
                     <option value="Mobil">Mobil</option>
                     <option value="Motor">Motor</option>
                     <option value="Lainnya">Lainnya</option>
@@ -114,7 +114,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label for="hobby">Hobi</label>
-                  <input type="text" class="form-control" name="hobby" id="hobby" placeholder="Hobi">
+                  <input type="text" class="form-control" name="hobby" id="hobby" value="{{$userDetail->hobby}}">
                 </div>
               </div>
             

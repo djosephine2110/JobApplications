@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Children;
 use Illuminate\Http\Request;
 
-class ChildrenController extends Controller
+class ChildController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +13,7 @@ class ChildrenController extends Controller
      */
     public function index()
     {
-        $childrens = auth()->user()->childrens;
-
-        return view('children.index', compact('childrens'));
+        //
     }
 
     /**
@@ -26,7 +23,7 @@ class ChildrenController extends Controller
      */
     public function create()
     {
-        return view('children.create');
+        //
     }
 
     /**
@@ -37,19 +34,7 @@ class ChildrenController extends Controller
      */
     public function store(Request $request)
     {
-        $formData = $request->validate([
-            'name' => 'required',
-            'gender' => 'required',
-            'dob' => 'required',
-            'education' => 'required',
-            
-        ]);
-
-        // $formData = $request->except('_token');
-
-        auth()->user()->childrens()->create($formData);
-
-        return redirect()->route('children.index');
+        //
     }
 
     /**
@@ -69,9 +54,9 @@ class ChildrenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Children $children)
+    public function edit($id)
     {
-        return view('children.edit', compact('children'));
+        //
     }
 
     /**
@@ -81,18 +66,9 @@ class ChildrenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Children $children)
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'name' => 'required',
-            'gender' => 'required',
-            'dob' => 'required',
-            'education' => 'required',
-        ]);
-
-        $children->update($request->all());
-
-        return redirect()->route('children.index');
+        //
     }
 
     /**
@@ -101,10 +77,8 @@ class ChildrenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Children $children)
+    public function destroy($id)
     {
-        $children->delete();
-
-        return back();
+        //
     }
 }

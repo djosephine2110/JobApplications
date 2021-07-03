@@ -9,14 +9,43 @@
         @csrf
         @method('PUT')
 
-    <input type="text" name='name' placeholder='Job Title' value="{{$children->name}}">
+    
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Nama</label>
+              <input type="text" name="name" class="form-control" id="inputEmail4" value="{{$children->name}}">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Jenis Kelamin</label>
+              <select id="inputState" name="gender" class="form-control">
+                <option value="{{$children->gender}}" selected>{{$children->gender}}</option>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+    
+    
+              </select>            
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Tanggal Lahir</label>
+              <input type="date" name="dob" class="form-control" id="inputEmail4" value="{{$children->dob}}">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Pendidikan</label>
+                <select id="inputState" name="education" class="form-control">
+                    <option value="{{$children->education}}" selected>{{$children->education}}</option>
+                    <option value="SD">SD</option>
+                    <option value="SMP">SMP</option>
+                    <option value="SMA/SMK">SMA/SMK</option>
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                    <option value="Lainnya">Lainnya</option>
 
-        <input type="text" name='gender' placeholder='Employer' value="{{$children->gender}}">
-
-        <input type="text" name='dob' placeholder='City' value="{{$children->dob}}">
-
-        <input type="text" name='education' placeholder='State' value="{{$children->education}}">
-
+        
+                  </select>      
+                </div>
+          </div>
         
 
         <input type="submit" value="Save">

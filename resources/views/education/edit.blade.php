@@ -24,8 +24,15 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="inputEmail4">Degree</label>
-              <input type="text" name="degree" class="form-control" id="inputEmail4" value="{{$education->degree}}">
-            </div>
+              <select id="inputState" name="degree" class="form-control">
+                <option value="{{$education->degree}}" selected>{{$education->degree}}</option>
+                <option value="SMP">SMP</option>
+                <option value="SMA/SMK">SMA/SMK</option>
+  
+                <option value="S1">S1</option>
+                <option value="S2">S2</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>                  </div>
             <div class="form-group col-md-6">
               <label for="inputPassword4">Major Studi</label>
               <input type="text" name="field_of_study" class="form-control" id="inputPassword4" value="{{$education->field_of_study}}">

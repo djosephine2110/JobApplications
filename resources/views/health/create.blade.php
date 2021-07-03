@@ -53,9 +53,13 @@
               <label for="to">Pengelihatan</label>
               <select id="inputState" name="eyesight" class="form-control">
                 <option selected>Choose...</option>
-                <option value="Baik">Baik</option>
-                <option value="Cukup">Cukup</option>
-                <option value="Kurang">Kurang</option>
+                <option value="Sangat Baik">Sangat Baik</option>
+
+              <option value="Baik">Baik</option>
+            <option value="Cukup">Cukup</option>
+            <option value="Kurang">Kurang</option>
+            <option value="Sangat Kurang">Sangat Kurang</option>
+
 
   
               </select> 
@@ -67,9 +71,13 @@
               <label for="to">Pendengaran</label>
               <select id="inputState" name="hearing" class="form-control">
                 <option selected>Choose...</option>
+                <option value="Sangat Baik">Sangat Baik</option>
+
                 <option value="Baik">Baik</option>
-                <option value="Cukup">Cukup</option>
-                <option value="Kurang">Kurang</option>
+              <option value="Cukup">Cukup</option>
+              <option value="Kurang">Kurang</option>
+              <option value="Sangat Kurang">Sangat Kurang</option>
+  
 
   
               </select> 
@@ -78,10 +86,13 @@
               <label for="to">Kesehatan</label>
               <select id="inputState" name="health" class="form-control">
                 <option selected>Choose...</option>
-                <option value="Baik">Baik</option>
-                <option value="Cukup">Cukup</option>
-                <option value="Kurang">Kurang</option>
+                <option value="Sangat Baik">Sangat Baik</option>
 
+                <option value="Baik">Baik</option>
+              <option value="Cukup">Cukup</option>
+              <option value="Kurang">Kurang</option>
+              <option value="Sangat Kurang">Sangat Kurang</option>
+  
   
               </select> 
             </div>

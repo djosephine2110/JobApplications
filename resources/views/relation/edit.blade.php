@@ -5,22 +5,32 @@
 <div class="container">
     <h2>Edit Work Detail</h2>
 
-    <form action="{{route('experience.update', $experience)}}" method='POST'>
+    <form action="{{route('relation.update', $relation)}}" method='POST'>
         @csrf
         @method('PUT')
 
-    <input type="text" name='job_title' placeholder='Job Title' value="{{$experience->job_title}}">
-
-        <input type="text" name='employer' placeholder='Employer' value="{{$experience->employer}}">
-
-        <input type="text" name='city' placeholder='City' value="{{$experience->city}}">
-
-        <input type="text" name='state' placeholder='State' value="{{$experience->state}}">
-
-        <input type="date" name='start_date' value="{{$experience->start_date}}">
-        <input type="date" name='end_date' value="{{$experience->end_date}}">
-
-        <input type="submit" value="Save">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="name">Nama</label>
+              <input type="text" class="form-control" name="name" id="name" value="{{$relation->name}}">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="relationship">Hubungan</label>
+              <input type="text" class="form-control" name="relationship" id="position" value="{{$relation->relationship}}">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="dob">Tanggal Lahir</label>
+              <input type="date" class="form-control" name="dob" id="name" value="{{$relation->dob}}">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="job">Pekerjaan</label>
+              <input type="text" class="form-control" name="job" id="position" value="{{$relation->job}}">
+            </div>
+          </div>
+        
+        <input type="submit" value="Submit" class="btn btn-primary" style="margin-left:46%; margin-right:50%;">
 
     </form>
 

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Children;
 use Illuminate\Http\Request;
+use App\Anak;
 
-class ChildrenController extends Controller
+class AnakController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class ChildrenController extends Controller
      */
     public function index()
     {
-        $childrens = auth()->user()->childrens;
+        $anaks = auth()->user()->anaks;
 
-        return view('children.index', compact('childrens'));
+        return view('anak.index', compact('anaks'));
     }
 
     /**
@@ -26,7 +26,7 @@ class ChildrenController extends Controller
      */
     public function create()
     {
-        return view('children.create');
+        return view('anak.create');
     }
 
     /**
@@ -42,14 +42,13 @@ class ChildrenController extends Controller
             'gender' => 'required',
             'dob' => 'required',
             'education' => 'required',
-            
         ]);
 
         // $formData = $request->except('_token');
 
-        auth()->user()->childrens()->create($formData);
+        auth()->user()->anaks()->create($formData);
 
-        return redirect()->route('children.index');
+        return redirect()->route('anak.index');
     }
 
     /**
@@ -69,9 +68,9 @@ class ChildrenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Children $children)
+    public function edit(Anak $anak)
     {
-        return view('children.edit', compact('children'));
+        return view('anak.edit', compact('anak'));
     }
 
     /**
@@ -81,7 +80,7 @@ class ChildrenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Children $children)
+    public function update(Request $request, Anak $anak)
     {
         $request->validate([
             'name' => 'required',
@@ -90,9 +89,9 @@ class ChildrenController extends Controller
             'education' => 'required',
         ]);
 
-        $children->update($request->all());
+        $anak->update($request->all());
 
-        return redirect()->route('children.index');
+        return redirect()->route('anak.index');
     }
 
     /**
@@ -101,9 +100,9 @@ class ChildrenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Children $children)
+    public function destroy(Anak $anak)
     {
-        $children->delete();
+        $anak->delete();
 
         return back();
     }

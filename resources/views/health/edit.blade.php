@@ -13,7 +13,7 @@
             <div class="form-group col-md-6">
               <label for="inputEmail4">Golongan Darah</label>
               <select id="inputState" name="blood_type" class="form-control">
-                <option selected>{{$health->blood_type}}</option>
+                <option value="{{$health->blood_type}}" selected>{{$health->blood_type}}</option>
                 <option value="A">A</option>
                 <option value="B">B</option>
   
@@ -36,7 +36,7 @@
               <div class="form-group col-md-6">
                 <label for="to">Pernah Dirawat</label>
                 <select id="inputState" name="opname" class="form-control">
-                  <option selected>{{$health->opname}}</option>
+                  <option value="{{$health->opname}}" selected>{{$health->opname}}</option>
                   <option value="Pernah">Pernah</option>
                   <option value="Belum Pernah">Belum Pernah</option>
     
@@ -52,10 +52,14 @@
               <div class="form-group col-md-6">
                 <label for="to">Pengelihatan</label>
                 <select id="inputState" name="eyesight" class="form-control">
-                  <option selected>{{$health->eyesight}}</option>
-                  <option value="Baik">Baik</option>
-                  <option value="Cukup">Cukup</option>
-                  <option value="Kurang">Kurang</option>
+                  <option value="{{$health->eyesight}}" selected>{{$health->eyesight}}</option>
+                  <option value="Sangat Baik">Sangat Baik</option>
+
+              <option value="Baik">Baik</option>
+            <option value="Cukup">Cukup</option>
+            <option value="Kurang">Kurang</option>
+            <option value="Sangat Kurang">Sangat Kurang</option>
+
   
     
                 </select> 
@@ -66,11 +70,14 @@
               <div class="form-group col-md-6">
                 <label for="to">Pendengaran</label>
                 <select id="inputState" name="hearing" class="form-control">
-                  <option selected>{{$health->hearing}}</option>
-                  <option value="Baik">Baik</option>
-                  <option value="Cukup">Cukup</option>
-                  <option value="Kurang">Kurang</option>
-  
+                  <option value="{{$health->hearing}}" selected>{{$health->hearing}}</option>
+                  <option value="Sangat Baik">Sangat Baik</option>
+
+              <option value="Baik">Baik</option>
+            <option value="Cukup">Cukup</option>
+            <option value="Kurang">Kurang</option>
+            <option value="Sangat Kurang">Sangat Kurang</option>
+
     
                 </select> 
               </div>
@@ -78,9 +85,13 @@
                 <label for="to">Kesehatan</label>
                 <select id="inputState" name="health" class="form-control">
                   <option selected>{{$health->health}}</option>
-                  <option value="Baik">Baik</option>
-                  <option value="Cukup">Cukup</option>
-                  <option value="Kurang">Kurang</option>
+                  <option value="Sangat Baik">Sangat Baik</option>
+
+              <option value="Baik">Baik</option>
+            <option value="Cukup">Cukup</option>
+            <option value="Kurang">Kurang</option>
+            <option value="Sangat Kurang">Sangat Kurang</option>
+
   
     
                 </select> 

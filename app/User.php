@@ -96,4 +96,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Job::class);
     }
+    public function anaks()
+    {
+        return $this->hasMany(Anak::class);
+    }
+    public function connections()
+    {
+        return $this->hasMany(Connection::class);
+    }
 }

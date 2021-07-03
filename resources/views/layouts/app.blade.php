@@ -143,8 +143,8 @@
                                     href="{{route('reference.index')}}">Referensi</a></li>
                                     <li class="breadcrumb-item {{ request()->is('married') ? 'active' : '' }}"><a
                                         href="{{route('married.create')}}">Status</a></li>
-                                        <li class="breadcrumb-item {{ request()->is('children') ? 'active' : '' }}"><a
-                                            href="{{route('children.index')}}">Anak</a></li>
+                                        <li class="breadcrumb-item {{ request()->is('anak') ? 'active' : '' }}"><a
+                                            href="{{route('anak.index')}}">Anak</a></li>
                                             <li class="breadcrumb-item {{ request()->is('relation') ? 'active' : '' }}"><a
                                                 href="{{route('relation.index')}}">Relasi</a></li>
                                                 <li class="breadcrumb-item {{ request()->is('organization') ? 'active' : '' }}"><a
@@ -152,7 +152,9 @@
                                                     <li class="breadcrumb-item {{ request()->is('health') ? 'active' : '' }}"><a
                                                         href="{{route('health.create')}}">Kesehatan</a></li>
                                                         <li class="breadcrumb-item {{ request()->is('job') ? 'active' : '' }}"><a
-                                                            href="{{route('job.create')}}">Pekerjaan yang dilamar</a></li>
+                                                            href="{{route('job.index')}}">Pekerjaan yang dilamar</a></li>
+                                                            <li class="breadcrumb-item {{ request()->is('connection') ? 'active' : '' }}"><a
+                                                                href="{{route('connection.index')}}">Rekomendasi Dari Perusahaan</a></li>
                             <li class="breadcrumb-item {{ request()->is('image') ? 'active' : '' }}"><a
                                 href="{{route('image.create')}}">Gambar Profile</a></li>
                                 <li class="breadcrumb-item {{ request()->is('file') ? 'active' : '' }}"><a

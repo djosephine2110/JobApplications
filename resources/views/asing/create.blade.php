@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    <h2>Work details</h2>
+    <h2>Bahasa Asing</h2>
 
 
     <form action="/asing" method='POST'>

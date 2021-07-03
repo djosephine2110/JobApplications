@@ -13,7 +13,7 @@
         <div class="form-group col-md-6">
           <label for="inputEmail4">Status Pernikahan</label>
           <select id="inputState" name="married_status" class="form-control">
-            <option selected>Choose...</option>
+            <option value="" selected>Choose...</option>
             <option value="Belum Menikah">Belum Menikah</option>
             <option value="Menikah">Menikah</option>
 
@@ -41,7 +41,7 @@
         <div class="form-group col-md-6">
           <label for="inputEmail4">Pendidikan</label>
           <select id="inputState" name="spouse_education" class="form-control">
-            <option selected>Choose...</option>
+            <option value="" selected>Choose...</option>
             <option value="SMA/SMK">SMA/SMK</option>
             <option value="D3">D3</option>
 

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Children;
+use App\Connection;
 use Illuminate\Http\Request;
 
-class ChildrenController extends Controller
+class ConnectionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class ChildrenController extends Controller
      */
     public function index()
     {
-        $childrens = auth()->user()->childrens;
+        $connections = auth()->user()->connections;
 
-        return view('children.index', compact('childrens'));
+        return view('connection.index', compact('connections'));
     }
 
     /**
@@ -26,7 +26,7 @@ class ChildrenController extends Controller
      */
     public function create()
     {
-        return view('children.create');
+        return view('connection.create');
     }
 
     /**
@@ -39,17 +39,16 @@ class ChildrenController extends Controller
     {
         $formData = $request->validate([
             'name' => 'required',
-            'gender' => 'required',
-            'dob' => 'required',
-            'education' => 'required',
+            'position' => 'required',
+            'relationship' => 'required',
             
         ]);
 
         // $formData = $request->except('_token');
 
-        auth()->user()->childrens()->create($formData);
+        auth()->user()->connections()->create($formData);
 
-        return redirect()->route('children.index');
+        return redirect()->route('connection.index');
     }
 
     /**
@@ -69,9 +68,9 @@ class ChildrenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Children $children)
+    public function edit(Connection $connection)
     {
-        return view('children.edit', compact('children'));
+        return view('connection.edit', compact('connection'));
     }
 
     /**
@@ -81,18 +80,18 @@ class ChildrenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Children $children)
+    public function update(Request $request, Connection $connection)
     {
         $request->validate([
             'name' => 'required',
-            'gender' => 'required',
-            'dob' => 'required',
-            'education' => 'required',
+            'position' => 'required',
+            'relationship' => 'required',
+           
         ]);
 
-        $children->update($request->all());
+        $connection->update($request->all());
 
-        return redirect()->route('children.index');
+        return redirect()->route('connection.index');
     }
 
     /**
@@ -101,9 +100,9 @@ class ChildrenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Children $children)
+    public function destroy(Connection $connection)
     {
-        $children->delete();
+        $connection->delete();
 
         return back();
     }

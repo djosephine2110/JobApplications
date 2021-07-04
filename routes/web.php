@@ -25,12 +25,15 @@ Route::get('/resume', 'ResumeController@index')->name('resume.index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/download/{id}', 'ApplicationController@download');
 
 
 // Route::get('user-detail/create', 'UserDetailController@create')->middleware('auth')->name('user-detail.create');
 
 // Route::post('user-detail', 'UserDetailController@store')->middleware('auth');
 
+Route::get('test', 'ApplicationController@index');
+Route::get('test_detail/{id}', 'ApplicationController@show');
 
 
 Route::resource('user-detail', 'UserDetailController')->middleware('auth');

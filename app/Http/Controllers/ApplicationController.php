@@ -22,7 +22,7 @@ class ApplicationController extends Controller
     public function index()
     {
         $user = User::all();
-        return view('test', compact('user'));
+        return view('adminHome', compact('user'));
 
         //$experiences = Experience::all();
         //$educations = Education::all();

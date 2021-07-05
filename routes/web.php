@@ -24,6 +24,9 @@ Route::get('/resume', 'ResumeController@index')->name('resume.index');
 
 Auth::routes();
 
+Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/download/{id}', 'ApplicationController@download');
 
@@ -32,7 +35,6 @@ Route::get('/download/{id}', 'ApplicationController@download');
 
 // Route::post('user-detail', 'UserDetailController@store')->middleware('auth');
 
-Route::get('test', 'ApplicationController@index');
 Route::get('test_detail/{id}', 'ApplicationController@show');
 
 

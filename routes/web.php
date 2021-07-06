@@ -3,6 +3,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Routes;
+use App\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +30,7 @@ Auth::routes();
 
 Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');
 
+Route::post('/home', 'HomeController@upload');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/download/{id}', 'ApplicationController@download');

@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    <h2>Profile Picture</h2>
+    <h2>Gambar Profile</h2>
 
 
     <form action="/image" method='POST' enctype="multipart/form-data">

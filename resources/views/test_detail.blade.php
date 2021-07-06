@@ -13,6 +13,9 @@
     <div class="card shadow">
       <div class="card-body ">
        <div class="container">
+        <div class="text-left">
+          <a class=" btn btn-primary mt-3" href=" /admin/home" role="button">Back</a>
+      </div>
         <section class="heading">
           @foreach($images as $e)
           <img src="{{asset('/images/' . $e->image)}}" alt="" class="img-thumbnail d-flex justify-content-right" style="max-width: 200px; float:right; margin-top:10%;" >
@@ -236,6 +239,8 @@
       
         @endforeach
       </section>
+
+      
        </div>
         
       </div>

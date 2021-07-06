@@ -32,4 +32,13 @@ class HomeController extends Controller
         $user = User::all();
         return view('adminHome', compact('user'));
     }
+    public function upload(Request $request)
+    {
+        if ($request->hasFile('image')) {
+            $filename = $request->image->getClientOriginalName();
+            $request->image->storeAs('images', $filename, 'public');
+            Auth()->user()->update(['image'=>$filename]);
+        }
+        return view('user_detail.create');
+    }
 }

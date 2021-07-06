@@ -73,8 +73,8 @@ class ApplicationController extends Controller
         $connections = $user->connections()->get();
         $jobs = $user->jobs()->get();
         $images = $user->images()->get();
-
-        return view('test_detail', compact('educations', 'userDetail', 'asings', 'skills', 'asings', 'experiences', 'marrieds', 'anaks', 'relations', 'organizations', 'healths', 'references', 'connections', 'jobs', 'images'));
+        $files=$user->files()->get();
+        return view('test_detail', compact('files', 'educations', 'userDetail', 'asings', 'skills', 'asings', 'experiences', 'marrieds', 'anaks', 'relations', 'organizations', 'healths', 'references', 'connections', 'jobs', 'images'));
     }
 
     /**
@@ -127,8 +127,14 @@ class ApplicationController extends Controller
         $connections = $user->connections()->get();
         $jobs = $user->jobs()->get();
         $images = $user->images()->get();
-
+        
         $pdf = \PDF::loadView('pdf_test', compact('educations', 'userDetail', 'asings', 'skills', 'asings', 'experiences', 'marrieds', 'anaks', 'relations', 'organizations', 'healths', 'references', 'connections', 'jobs', 'images'));
         return $pdf->download('application.pdf');
+    }
+    public function downloadPdf($id)
+    {
+        $user = User::find($id);
+        $pathToFile = storage_path('public/files' . $user->files->file);
+        return response()->download($pathToFile);
     }
 }

@@ -35,7 +35,7 @@
 
 
 <div class="text-right">
-    <a class=" btn btn-primary mt-3" href=" {{route('married.index')}} " role="button">Next</a>
+    <a class=" btn btn-primary mt-3" href=" {{route('married.create')}} " role="button">Next</a>
 </div>
 
 

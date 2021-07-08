@@ -28,13 +28,14 @@ Route::get('/resume', 'ResumeController@index')->name('resume.index');
 
 Auth::routes();
 Route::get('admin/books/download/{id}', 'ApplicationController@downloadPdf');
+Route::get('changeStatus', 'HomeController@changeStatus');
 
 Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');
 
 Route::post('/home', 'HomeController@upload');
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/download/{id}', 'ApplicationController@download');
+Route::get('/testdetaill/{id}', 'ApplicationController@showApps');
 
 
 // Route::get('user-detail/create', 'UserDetailController@create')->middleware('auth')->name('user-detail.create');

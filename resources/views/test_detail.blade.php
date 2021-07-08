@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-</head>
-<body>
+@extends('layouts.adm')
+@section('content')
   <div class="container ">
     <div class="card shadow">
       <div class="card-body ">
@@ -18,10 +9,11 @@
       </div>
         <section class="heading">
           @foreach($images as $e)
-          <img src="{{asset('/images/' . $e->image)}}" alt="" class="img-thumbnail d-flex justify-content-right" style="max-width: 200px; float:right; margin-top:10%;" >
+          <img src="{{asset('/images/' . $e->image)}}" alt="" class="img-thumbnail d-flex justify-content-right" style="max-width: 200px; float:right; margin-top:18%;" >
           @endforeach
+          <br>
           @foreach($userDetail as $e)
-          <h2 class="text-center"><b>Application of {{$e->name}}</b></h2>
+          <h2 class="text-center" style="margin-left:35%;"><b>Application of {{$e->name}}</b></h2>
       
           <p><b>Nama Lengkap:</b> {{$e->name}} </p>
           <p><b>KTP:</b> {{$e->ktp}}</p>
@@ -98,6 +90,7 @@
             <p><b>Gaji: </b>{{$work->salary}} </p>
             <p><b>Alasan Keluar: </b>{{$work->reason}} </p>
             <p><b>Deskripsi Pekerjaan: </b>{{$work->description}}</p>
+            <br>
             @endforeach
         </section>
       
@@ -249,7 +242,5 @@
   
   </div>
   
-</body>
-</html>
-
+@endsection
 

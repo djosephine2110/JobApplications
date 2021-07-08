@@ -30,8 +30,8 @@ class HomeController extends Controller
 
     public function adminHome()
     {
-        $user = User::all();
-        return view('adminHome', compact('user'));
+        $users = User::get();
+        return view('adminHome', compact('users'));
     }
     public function upload(Request $request)
     {
@@ -46,5 +46,15 @@ class HomeController extends Controller
             Auth()->user()->update(['file'=>$filename]);
         }
         return view('user_detail.create');
+    }
+
+    public function changeStatus(Request $request)
+    {
+        \Log::info($request->all());
+        $user = User::find($request->user_id);
+        $user->status = $request->status;
+        $user->save();
+
+        return response()->json(['success'=>'Status change successfully.']);
     }
 }

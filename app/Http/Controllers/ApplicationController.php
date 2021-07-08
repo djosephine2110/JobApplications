@@ -137,4 +137,32 @@ class ApplicationController extends Controller
         $pathToFile = public_path('storage/files/' . $user->file);
         return response()->download($pathToFile);
     }
+    public function showApps($id)
+    {
+        $user = User::find($id);
+        $educations = $user->education()->get();
+        $userDetail = $user->details()->get();
+        $skills = $user->skills()->get();
+        $asings = $user->asings()->get();
+        $experiences = $user->experiences()->get();
+        $marrieds = $user->marrieds()->get();
+        $anaks = $user->anaks()->get();
+        $relations = $user->relations()->get();
+        $organizations = $user->organizations()->get();
+        $healths = $user->healths()->get();
+        $references = $user->references()->get();
+        $connections = $user->connections()->get();
+        $jobs = $user->jobs()->get();
+        $images = $user->images()->get();
+        $files=$user->files()->get();
+        $pdf = \PDF::loadView('testdetail_pdf', compact('files', 'educations', 'userDetail', 'asings', 'skills', 'asings', 'experiences', 'marrieds', 'anaks', 'relations', 'organizations', 'healths', 'references', 'connections', 'jobs', 'images'));
+        return $pdf->download('application.pdf');
+    }
+    public function downloadResume($id)
+    {
+        $user = User::find($id);
+
+        $pdf = \PDF::loadView('testdetail_pdf', compact('user'));
+        return $pdf->download('application.pdf');
+    }
 }

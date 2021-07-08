@@ -15,6 +15,8 @@
                         @csrf
                         <input type="file" name="image" class="mb-3">
                         <br>
+                        <input type="file" name="file" class="mb-3">
+                        <br>
                         <input type="submit" value="Submit" class="btn btn-primary" style="margin-left:50%; margin-right:50%;">
                     </form>
                 </div>

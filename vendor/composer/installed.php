@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'dc3221697ed2f81cfc4a3a156b867c2365587eae',
+    'reference' => 'db9f1245ab05b03ec36877e930c762875b6cddab',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -440,7 +440,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'dc3221697ed2f81cfc4a3a156b867c2365587eae',
+      'reference' => 'db9f1245ab05b03ec36877e930c762875b6cddab',
     ),
     'laravel/tinker' => 
     array (
@@ -1224,6 +1224,15 @@
       array (
       ),
       'reference' => '9dc4f203e36f2b486149058bade43c851dd97451',
+    ),
+    'webpatser/laravel-uuid' => 
+    array (
+      'pretty_version' => '3.0',
+      'version' => '3.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'bde126250b99773481c4d20d80f02948ab3b61db',
     ),
   ),
 );

@@ -134,7 +134,7 @@ class ApplicationController extends Controller
     public function downloadPdf($id)
     {
         $user = User::find($id);
-        $pathToFile = storage_path('public/files' . $user->files->file);
+        $pathToFile = public_path('storage/files/' . $user->file);
         return response()->download($pathToFile);
     }
 }

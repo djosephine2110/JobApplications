@@ -19,7 +19,8 @@
 
                         <br>
                         <label for=""><b>Unduh CV</b></label><br>
-                        <input type="file" name="file" class="mb-3">
+                        <input type="file" name="file" class="mb-3" >
+                        <label for="">{{Auth::user()->file ?? 'No File Upload'}}</label>
                         <br>
                         <input type="submit" value="Submit" class="btn btn-primary mt-3" >
                         <a class=" btn btn-primary mt-3" href="/user-detail " role="button" style="float:right;">Next</a>

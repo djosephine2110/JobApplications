@@ -28,6 +28,8 @@ Route::get('/resume', 'ResumeController@index')->name('resume.index');
 
 Auth::routes();
 Route::get('admin/books/download/{id}', 'ApplicationController@downloadPdf');
+Route::get('admin/images/download/{id}', 'ApplicationController@downloadPdf');
+
 Route::get('changeStatus', 'HomeController@changeStatus');
 
 Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');

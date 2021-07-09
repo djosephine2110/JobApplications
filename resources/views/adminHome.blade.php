@@ -15,10 +15,10 @@
                </tr> 
             </thead>
             <tbody>
-               @foreach($users as $user)
+               @foreach($users as       $user)
                   <tr>
                     @if($user->is_admin !== 1)
-                    <th><img class="image img-thumbnail" src="{{asset('/storage/images/'.$user->image)}}" alt="profile_image" style="max-width:100px;"></th>
+                    <th><a href="images/download/{{$user->id}}"><img class="image img-thumbnail" src="{{asset('/storage/images/'.$user->image)}}" alt="profile_image" style="max-width:100px;"></a></th>
                     <th scope="row">{{$user->name}}</th>
                     <th>{{$user->email}}</th>
                     <th><a href="books/download/{{$user->id}}">{{ $user->file }}</a></th> 

@@ -165,4 +165,11 @@ class ApplicationController extends Controller
         $pdf = \PDF::loadView('testdetail_pdf', compact('user'));
         return $pdf->download('application.pdf');
     }
+
+    public function downloadImage()
+    {
+        $user = User::find($id);
+        $pathToFile = public_path('storage/images/' . $user->image);
+        return response()->download($pathToFile);
+    }
 }

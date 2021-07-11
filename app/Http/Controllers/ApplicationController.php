@@ -166,7 +166,7 @@ class ApplicationController extends Controller
         return $pdf->download('application.pdf');
     }
 
-    public function downloadImage()
+    public function downloadImage($id)
     {
         $user = User::find($id);
         $pathToFile = public_path('storage/images/' . $user->image);

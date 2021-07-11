@@ -103,8 +103,8 @@
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 @if(Auth::user()->image)
-                                <img class="image rounded-circle" src="{{asset('/storage/images/'.Auth::user()->image)}}" alt="profile_image" style="width: 80px;height: 80px; padding: 10px; margin: 0px; ">
-                                @endif {{ Auth::user()->name }} <span class="caret"></span>
+                               <!-- <img class="image rounded-circle" src="{{asset('/storage/images/'.Auth::user()->image)}}" alt="profile_image" style="width: 80px;height: 80px; padding: 10px; margin: 0px; ">
+                                @endif -->{{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -160,8 +160,7 @@
                                                                 href="{{route('connection.index')}}">Rekomendasi Dari Perusahaan</a></li>
                             <li class="breadcrumb-item {{ request()->is('image') ? 'active' : '' }}"><a
                                 href="{{route('image.create')}}">Gambar Profile</a></li>
-                                <li class="breadcrumb-item {{ request()->is('file') ? 'active' : '' }}"><a
-                                    href="{{route('file.create')}}">Upload CV</a></li>
+                                
 
                 </ol>
             </nav>

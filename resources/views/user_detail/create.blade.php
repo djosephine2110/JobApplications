@@ -1,16 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="card mb-2" style="background-color:rgba(255, 255, 255, 0.507);">
+  <div class="card-body">
 <div class="container">
-<h2>Tell us something about you</h2>
+<h2>Data Diri</h2>
 
 
 <form action="/user-detail" method='POST'>
     @csrf
     <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="name">Name</label>
+          <label for="name">Nama Lengkap</label>
           <input type="text" class="form-control" name="name" id="name" placeholder="example: John Doe">
         </div>
         <div class="form-group col-md-6">
@@ -116,6 +117,7 @@
 </form>
 
 </div>
-
+  </div>
+</div>
 
 @endsection

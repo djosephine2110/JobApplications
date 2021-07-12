@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="card mb-2" style="background-color:rgba(255, 255, 255, 0.507);">
+  <div class="card-body">
 <div class="container">
     <h2>Edit Organisasi</h2>
 
@@ -41,6 +42,7 @@
     </form>
 
 </div>
-
+  </div>
+</div>
 
 @endsection

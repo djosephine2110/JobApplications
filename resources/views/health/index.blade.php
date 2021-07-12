@@ -7,7 +7,7 @@
 </div>
 @foreach($healths as $e)
 
-<div class="card mb-2">
+<div class="card mb-2" style="background-color:rgba(255, 255, 255, 0.507);">
     <div class="card-body">
         <h4 class="card-title"> Kesehatan</h4>
 

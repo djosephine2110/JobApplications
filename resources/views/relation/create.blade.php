@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="card mb-2" style="background-color:rgba(255, 255, 255, 0.507);">
+  <div class="card-body">
 <div class="container">
     <h2>Relasi</h2>
 
@@ -40,5 +41,6 @@
 
 </div>
 
-
+  </div>
+</div>
 @endsection

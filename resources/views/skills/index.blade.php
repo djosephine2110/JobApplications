@@ -10,7 +10,7 @@
 
 @foreach($skills as $e)
 
-<div class="card">
+<div class="card" style="background-color:rgba(255, 255, 255, 0.507);">
     <div class="card-body">
         <h4 class="card-title"> {{$e->name}} ( {{$e->rating}} )</h4>
 

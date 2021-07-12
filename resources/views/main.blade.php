@@ -4,17 +4,17 @@
 
 <div class="container">
     <div class="content">
-        <h1 style="font-size: 50px; margin-top:18%;">
+       <!-- <h1 style="font-size: 52px; margin-top:18%;">
             <a  class="typewrite" data-period="2000" data-type='["WELCOME TO ERAKOMP CAREER CENTER"]'>
               <span class="wrap"></span>
             </a>
           </h1>
 
         
-    </div>
+    </div>-->
 
 
-    <a name="" id="" class="btn btn-primary" href=" {{route('user-detail.create')}} " role="button" >Apply Now</a>
+    <!--<a name="" id="" class="btn btn-primary" href=" {{route('user-detail.create')}} " role="button" >Apply Now</a>-->
 
 </div>
 <script>

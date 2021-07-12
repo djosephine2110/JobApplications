@@ -10,7 +10,7 @@
 
 @foreach($education as $e)
 
-<div class="card mb-2">
+<div class="card mb-2" style="background-color:rgba(255, 255, 255, 0.507);">
     <div class="card-body">
         <h4 class="card-title"> {{$e->degree}} {{$e->school_name}} ({{$e->graduation_start_date}} -
             {{$e->graduation_end_date}})</h4>

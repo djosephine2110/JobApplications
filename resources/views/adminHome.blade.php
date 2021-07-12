@@ -9,8 +9,8 @@
                   <th>Email</th>
                   <th>CV Link</th>
 
-                  <th>Status</th>
-                  <th scope="col">Action</th>
+                  <th>Application Status</th>
+                  <th scope="col">Actions</th>
 
                </tr> 
             </thead>

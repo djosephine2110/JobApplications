@@ -32,9 +32,14 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <h1 style="font-size: 15px; padding-top:4px; font-weight:bold;">
+                    <a  class="typewrite" data-period="2000" data-type='["ERAKOMP CAREER CENTER"]'>
+                      <span class="wrap"></span>
+                    </a>
+                  </h1>
+               <!-- <a class="navbar-brand" href="{{ url('/') }}">
                     ERAKOMP CAREER
-                </a>
+                </a>-->
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
@@ -57,11 +62,11 @@
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}">Masuk</a>
                         </li>
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">Daftar</a>
                         </li>
                         @endif
                         @else
@@ -150,5 +155,62 @@
         </main>
     </div>
 </body>
+<script>
+    var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
 
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+    }
+
+    setTimeout(function() {
+    that.tick();
+    }, delta);
+};
+
+window.onload = function() {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    document.body.appendChild(css);
+};
+</script>
 </html>

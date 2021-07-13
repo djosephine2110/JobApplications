@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use App\User;
+
 use App\Experience;
 use App\Education;
 
@@ -27,6 +28,11 @@ class ApplicationController extends Controller
         //$experiences = Experience::all();
         //$educations = Education::all();
         //return view('test', compact('experiences', 'educations'));
+    }
+    public function showPost()
+    {
+        $post = Post::all();
+        return view('post.create', compact('post'));
     }
 
     /**

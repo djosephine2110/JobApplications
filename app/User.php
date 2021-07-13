@@ -47,6 +47,11 @@ class User extends Authenticatable
         return $this->hasMany(Experience::class);
     }
 
+    public function postings()
+    {
+        return $this->hasMany(Posting::class);
+    }
+
     public function skills()
     {
         return $this->hasMany(Skill::class);
@@ -107,5 +112,9 @@ class User extends Authenticatable
     public function connections()
     {
         return $this->hasMany(Connection::class);
+    }
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
     }
 }

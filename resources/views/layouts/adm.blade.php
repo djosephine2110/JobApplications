@@ -41,7 +41,7 @@
 
 
 
-                        <li class="sidebar-item active ">
+                        <li class="sidebar-item  ">
                             <a href="/admin/home" class='sidebar-link'>
                                 <i data-feather="home" width="20"></i>
                                 <span>Dashboard</span>
@@ -49,9 +49,16 @@
 
                         </li>
                         <li class="sidebar-item">
-                            <a href="/admin/home" class='sidebar-link'>
+                            <a href="/posting/create" class='sidebar-link'>
                                 <i data-feather="home" width="20"></i>
-                                <span>History</span>
+                                <span>Post A Job</span>
+                            </a>
+
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/posting/" class='sidebar-link'>
+                                <i data-feather="home" width="20"></i>
+                                <span>Job List</span>
                             </a>
 
                         </li>

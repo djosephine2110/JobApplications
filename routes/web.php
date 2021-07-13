@@ -39,6 +39,7 @@ Route::post('/home', 'HomeController@upload');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/testdetaill/{id}', 'ApplicationController@showApps');
+Route::resource('posting', 'PostingController')->middleware('auth');
 
 
 // Route::get('user-detail/create', 'UserDetailController@create')->middleware('auth')->name('user-detail.create');
@@ -60,6 +61,7 @@ Route::resource('experience', 'ExperienceController')->middleware('auth');
 Route::resource('organization', 'OrganizationController')->middleware('auth');
 Route::resource('children', 'ChildrenController')->middleware('auth');
 Route::resource('job', 'JobController')->middleware('auth');
+Route::resource('post', 'PostController')->middleware('auth');
 
 Route::resource('reference', 'ReferenceController')->middleware('auth');
 Route::resource('relation', 'RelationController')->middleware('auth');

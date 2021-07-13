@@ -49,9 +49,9 @@
 
                         </li>
                         <li class="sidebar-item">
-                            <a href="/customsearch" class='sidebar-link'>
+                            <a href="/admin/home" class='sidebar-link'>
                                 <i data-feather="home" width="20"></i>
-                                <span>Applications</span>
+                                <span>History</span>
                             </a>
 
                         </li>

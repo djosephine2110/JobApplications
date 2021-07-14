@@ -21,6 +21,7 @@ class CreatePostingsTable extends Migration
             $table->string('education');
             $table->string('experience');
             $table->string('status');
+            $table->string('category');
 
             $table->timestamps();
         });

@@ -21,7 +21,16 @@ use App\User;
 Route::get('/', function () {
     return view('main');
 });
-
+Route::get('/details/{id}', 'JobpostingController@show');
+Route::get('/jobposting', 'JobpostingController@index');
+Route::get('/it', 'JobpostingController@it');
+Route::get('/finance', 'JobpostingController@finance');
+Route::get('/social', 'JobpostingController@social');
+Route::get('/hrd', 'JobpostingController@hrd');
+Route::get('/sales', 'JobpostingController@sales');
+Route::get('/legal', 'JobpostingController@legal');
+Route::get('/others', 'JobpostingController@others');
+Route::get('/product', 'JobpostingController@product');
 
 Route::get('/resume/download', 'ResumeController@download')->name('resume.download');
 Route::get('/resume', 'ResumeController@index')->name('resume.index');

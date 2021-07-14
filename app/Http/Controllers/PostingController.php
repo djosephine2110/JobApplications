@@ -44,6 +44,8 @@ class PostingController extends Controller
             'education' => 'required',
             'experience' => 'required',
             'status' => 'required',
+            'category' => 'required',
+
         ]);
 
         // $formData = $request->except('_token');
@@ -90,6 +92,8 @@ class PostingController extends Controller
             'education' => 'required',
             'experience' => 'required',
             'status' => 'required',
+            'category' => 'required',
+
         ]);
 
         $posting->update($request->all());

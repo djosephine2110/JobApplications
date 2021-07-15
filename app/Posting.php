@@ -9,6 +9,6 @@ class Posting extends Model
     protected $guarded = [];
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class)->orderBy('ASC', 'created_at');
     }
 }

@@ -39,7 +39,7 @@ Route::get('/resume', 'ResumeController@index')->name('resume.index');
 Route::resource('daterange', 'DateRangeController');
 
 Auth::routes();
-Route::get('admin/books/download/{id}', 'ApplicationController@downloadPdf');
+Route::get('users/books/download/{id}', 'ApplicationController@downloadPdf');
 Route::get('users/images/download/{id}', 'ApplicationController@downloadImage');
 
 Route::get('changeStatus', 'HomeController@changeStatus');

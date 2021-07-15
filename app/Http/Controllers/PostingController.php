@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Posting;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Collection;
 
 class PostingController extends Controller
 {
@@ -15,9 +16,9 @@ class PostingController extends Controller
      */
     public function index()
     {
-        $postings = auth()->user()->postings;
+        $posting = auth()->user()->postings->sortByDesc('created_at');
 
-        return view('posting.index', compact('postings'));
+        return view('posting.index', compact('posting'));
     }
 
     /**
@@ -52,7 +53,7 @@ class PostingController extends Controller
 
         auth()->user()->postings()->create($formData);
 
-        return view('posting.index');
+        return view('posting.create');
     }
 
     /**

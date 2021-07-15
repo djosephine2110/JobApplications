@@ -11,8 +11,8 @@
         <h4 class="card-title"> {{$e->title}}  </h4>
 
         <ul>
-            <li>Nama Perusahaan: {{ $e->created_at->format('l, d-m-Y')}}</li>
-            
+            <li>Created at: {{ $e->created_at->format('l, d-m-Y')}}</li>
+            <li>Status: {{$e->status}}</li>
         </ul>
 
     <a  class="btn btn-sm btn-primary" href=" {{route('posting.edit', $e)}} " role="button">Edit</a>

@@ -7,7 +7,7 @@
                             </div><!-- end title -->
                             @foreach($posts as $post)
                             
-                            @if($post->category === 'Social Media')
+                            @if($post->category === 'Social Media' && $post->status === 'Post')
                             <div class="blog-box row">
                                 <div class="col-md-4">
                                     <div class="post-media">

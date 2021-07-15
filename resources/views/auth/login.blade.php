@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card" style="background-color:rgba(255, 255, 255, 0.507);">
+            <div class="card" style="background-color:rgba(255, 255, 255, 0.788);">
                 <div class="card-header">Masuk</div>
 
                 <div class="card-body">

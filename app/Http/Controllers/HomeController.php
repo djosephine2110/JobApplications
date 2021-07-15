@@ -57,4 +57,21 @@ class HomeController extends Controller
 
         return response()->json(['success'=>'Status change successfully.']);
     }
+
+    public function update(Request $request, User $user)
+    {
+        $request->validate([
+            'name' => 'sometimes',
+            'email' => 'sometimes',
+            'is_admin' => 'sometimes',
+            'image' => 'sometimes',
+            'file' =>'sometimes',
+            'status' => 'sometimes',
+            
+        ]);
+
+        $user->update($request->all());
+
+        return redirect()->route('edit_user');
+    }
 }

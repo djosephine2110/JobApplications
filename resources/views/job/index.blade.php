@@ -8,7 +8,7 @@
 </div>
 @foreach($jobs as $e)
 
-<div class="card mb-2">
+<div class="card mb-2" style="background-color:rgba(255, 255, 255, 0.788);">
     <div class="card-body">
         <h4 class="card-title">Melamar untuk bagian {{ $e->job_name}}</h4>
 

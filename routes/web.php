@@ -31,6 +31,8 @@ Route::get('/sales', 'JobpostingController@sales');
 Route::get('/legal', 'JobpostingController@legal');
 Route::get('/others', 'JobpostingController@others');
 Route::get('/product', 'JobpostingController@product');
+Route::get('profile', 'ProfileController@edit')->name('profile.edit');
+Route::resource('users', UserController::class);
 
 Route::get('/resume/download', 'ResumeController@download')->name('resume.download');
 Route::get('/resume', 'ResumeController@index')->name('resume.index');
@@ -38,17 +40,21 @@ Route::resource('daterange', 'DateRangeController');
 
 Auth::routes();
 Route::get('admin/books/download/{id}', 'ApplicationController@downloadPdf');
-Route::get('admin/images/download/{id}', 'ApplicationController@downloadImage');
+Route::get('users/images/download/{id}', 'ApplicationController@downloadImage');
 
 Route::get('changeStatus', 'HomeController@changeStatus');
 
 Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');
 
 Route::post('/home', 'HomeController@upload');
+Route::resource('users', UserController::class);
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/testdetaill/{id}', 'ApplicationController@showApps');
+Route::get('/edit_status/{id}', 'HomeController@update');
+
 Route::resource('posting', 'PostingController')->middleware('auth');
+Route::resource('customsearch', 'CustomSearchController');
 
 
 // Route::get('user-detail/create', 'UserDetailController@create')->middleware('auth')->name('user-detail.create');

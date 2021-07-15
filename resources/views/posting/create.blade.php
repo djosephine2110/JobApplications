@@ -34,21 +34,6 @@
 
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputEmail4">Category</label>
-            <select id="inputState" name="category" class="form-control">
-              <option selected>Choose...</option>
-              <option value="IT">IT</option>
-              <option value="HRD">HRD</option>
-              <option value="Finance">Finance</option>
-              <option value="Product">Product</option>
-              <option value="Sales">Sales</option>
-              <option value="Legal">Legal</option>
-              <option value="Others">Others</option>
-              <option value="Social Media">Social Media</option>
-
-            </select>          
-          </div>
-          <div class="form-group col-md-6">
             <label for="inputEmail4">Status</label>
             <select id="inputState" name="status" class="form-control">
               <option selected>Choose...</option>

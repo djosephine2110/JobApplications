@@ -8,7 +8,7 @@
 </div>
 @foreach($experiences as $e)
 
-<div class="card mb-2" style="background-color:rgba(255, 255, 255, 0.507);">
+<div class="card mb-2" style="background-color:rgba(255, 255, 255, 0.788);">
     <div class="card-body">
         <h4 class="card-title"> {{$e->position}}  ({{$e->from}} sampai {{$e->to}}) </h4>
 

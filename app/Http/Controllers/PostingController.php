@@ -52,7 +52,7 @@ class PostingController extends Controller
 
         auth()->user()->postings()->create($formData);
 
-        return redirect()->route('posting.index');
+        return view('posting.index');
     }
 
     /**

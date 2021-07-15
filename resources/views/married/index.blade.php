@@ -7,7 +7,7 @@
 </div>
 @foreach($marrieds as $e)
 
-<div class="card mb-2" style="background-color:rgba(255, 255, 255, 0.507);">
+<div class="card mb-2" style="background-color:rgba(255, 255, 255, 0.788);">
     <div class="card-body">
         <h4 class="card-title"> {{$e->married_status}}  </h4>
 

@@ -6,6 +6,7 @@
                                 <h3 class="color-green"><a href="blog-category-01.html" title="">Job Listings</a></h3>
                             </div><!-- end title -->
                             @foreach($posts as $post)
+                            @if($post->status === "Post")
                             <div class="blog-box row">
                                 <div class="col-md-4">
                                     <div class="post-media">
@@ -25,6 +26,7 @@
                             </div><!-- end blog-box -->
 
                             <hr class="invis">
+                            @endif
                             @endforeach
 
                         </div><!-- end blog-list -->

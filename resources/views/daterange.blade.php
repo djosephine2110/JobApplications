@@ -1,7 +1,6 @@
 <html>
  <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Laravel 5.8 - Daterange Filter in Datatables with Server-side Processing</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
   <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
@@ -11,10 +10,41 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
  </head>
+ <style>
+     
+ </style>
  <body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class = "sr-only">Toggle navigation</span>
+                    <span class = "glyphicon glyphicon-tint white"></span>
+                </button>
+                <a class="navbar-brand" href="home">Erakomp Career </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">Dashboard</a></li>
+                    <li><a href="projects">Add Job Post</a></li>
+                    <li><a href="resume">Job List</a></li>
+                    <li class="sidebar-item">
+                        <a  href="{{ route('logout') }}" class='sidebar-link'  onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                            <i data-feather="home" width="20"></i>
+                            <span>Logout</span>
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+
+                    </li>
+                </ul>
+            </div>
+      </div>
+  </nav>
   <div class="container">    
      <br />
-     <h3 align="center">Laravel 5.8 - Daterange Filter in Datatables with Server-side Processing</h3>
      <br />
             <br />
             <div class="row input-daterange">
@@ -37,6 +67,7 @@
                 <th>Image</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>CV</th>
                 <th>Status</th>
                 <th>Action</th>
             </tr>
@@ -70,6 +101,8 @@ $(document).ready(function(){
     {
      data:'image',
      name:'image',
+     render: function (data, type, row) { return '<img class="image img-thumbnail" src="/storage/images/'+ data + '" alt="profile_image" style="max-width:100px;">'; }
+
     },
     {
      data:'name',
@@ -80,13 +113,19 @@ $(document).ready(function(){
      name:'email'
     },
     {
+     data:'id',
+     name:'id',
+     render: function (data, type, row) { return '<a href="books/download/' + data +'" >' + 'Download CV' + '</a>'; }
+
+    },
+    {
      data:'status',
      name:'status'
     },
     {
-     data:'action',
-     name:'action',
-     orderable: false, searchable: false
+     data:'id',
+     name:'id',
+     render: function (data, type, row) { return '<a href="/users/' + data + '/edit" class="btn btn-primary">' + 'Edit' + '</a> <a href="users/images/download/' + data + '" class="btn btn-warning">' + 'Download Image' + '</a>'; }
     }
    ]
   });
@@ -114,5 +153,21 @@ $(document).ready(function(){
  });
  
 
+});
+</script>
+<script>
+    $(function () {
+    "use strict";
+    
+    $(".image img").click(function () {
+        var $src = $(this).attr("src");
+        $(".show").fadeIn();
+        $(".img-show img").attr("src", $src);
+    });
+    
+    $("span, .overlay").click(function () {
+        $(".show").fadeOut();
+    });
+    
 });
 </script>

@@ -116,7 +116,7 @@ $(document).ready(function(){
     {
     data:'id',
     name:'id',
-    render: function (data, type, row) { return '<a href="books/download/' + data +'" >' + 'Download CV' + '</a>'; }
+    render: function (data, type, row) { return '<a href="/testdetaill/' + data +'" >' + 'Download CV' + '</a>'; }
 
     },
     {
@@ -130,7 +130,7 @@ $(document).ready(function(){
     {
     data:'id',
     name:'id',
-    render: function (data, type, row) { return '<a href="/users/' + data + '/edit" class="btn btn-primary">' + '<i class="fas fa-pen"></i>' + '</a> <a href="users/images/download/' + data + '" class="btn btn-warning ">' + '<i class="fas fa-upload"></i>' + '</a> <a href="/testdetaill/' + data + '" class="btn btn-primary">' + '<i class="fas fa-file-upload"></i>' + '</a> <a href="/test_detail/' + data +'" class="btn btn-primary" >' + '<i class="fas fa-eye"></i>' + '</a>'; }
+    render: function (data, type, row) { return '<a href="/users/' + data + '/edit" class="btn btn-primary">' + '<i class="fas fa-pen"></i>' + '</a> <a href="users/images/download/' + data + '" class="btn btn-warning ">' + '<i class="fas fa-upload"></i>' + '</a> <a href="users/books/download/' + data + '" class="btn btn-primary">' + '<i class="fas fa-file-upload"></i>' + '</a> <a href="/test_detail/' + data +'" class="btn btn-primary" >' + '<i class="fas fa-eye"></i>' + '</a>'; }
     },
     
     ]

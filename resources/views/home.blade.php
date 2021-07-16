@@ -22,6 +22,22 @@
                         <input type="file" name="file" class="mb-3" >
                         <label for="">{{Auth::user()->file ?? 'No File Upload'}}</label>
                         <br>
+
+                        
+                            <label for="inputEmail4">Select Job Category</label>
+                            <select id="inputState" name="category" class="form-control">
+                                <option value="{{Auth::user()->category}}" selected>{{Auth::user()->category}}</option>
+                                <option value="IT">IT</option>
+                                <option value="HRD">HRD</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Product">Product</option>
+                                <option value="Sales">Sales</option>
+                                <option value="Legal">Legal</option>
+                                <option value="Social Media">Social Media</option>
+
+                                <option value="Others">Others</option>
+                  
+                              </select>          
                         <input type="submit" value="Submit" class="btn btn-primary mt-3" >
                         <a class=" btn btn-primary mt-3" href="/user-detail " role="button" style="float:right;">Next</a>
 

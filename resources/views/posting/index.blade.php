@@ -15,14 +15,14 @@
             <li>Status: {{$e->status}}</li>
         </ul>
 
-    <a  class="btn btn-sm btn-primary" href=" {{route('posting.edit', $e)}} " role="button">Edit</a>
+    <a  class="btn btn-sm btn-primary" href=" {{route('posting.edit', $e)}} " role="button">Edit Status</a>
 
-        <form action="{{route('posting.destroy', $e)}}" method="POST" style="display: inline">
+       <!-- <form action="{{route('posting.destroy', $e)}}" method="POST" style="display: inline">
         @csrf
         @method('DELETE')
 
         <input type="submit" value="Delete" class="btn btn-sm btn-danger">
-        </form>
+        </form>-->
 
     </div>
 </div>

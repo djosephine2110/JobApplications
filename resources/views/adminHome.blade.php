@@ -14,7 +14,20 @@
 </head>
 <style>
     #customer_data {
-        width:1300px !important;
+        width:1100px !important;
+        margin-left: 23%;
+    }
+    div.dataTables_wrapper div.dataTables_info{
+        padding-left: 50% !important;
+    }
+    div.dataTables_wrapper div.dataTables_paginate {
+        padding-right: 5%;
+    }
+    div.dataTables_wrapper div.dataTables_filter{
+        padding-right: 10%;
+    }
+    div.dataTables_wrapper div.dataTables_length{
+        padding-left: 50%;
     }
     .sidebar-wrapper .menu .sidebar-title {
         font-size: 15px;
@@ -28,9 +41,12 @@ max-width:950px;
 
 }
 }
+div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:last-child {
+    padding-right: 15% !important;
+}
 </style>
 <body>
-    <div class="container">    
+    <div class="">    
     <br />
     <br />
             <br />

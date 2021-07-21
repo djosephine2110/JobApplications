@@ -81,6 +81,7 @@ div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:last-chil
     <table id="customer_data" class="table table-bordered table-striped">
                     <thead>
                         <tr>
+                            
                             <th>Image</th>
                             <th>Name</th>
                             <th>Email</th>
@@ -115,6 +116,7 @@ $(document).ready(function(){
                 data:{filter_gender:filter_gender, filter_country:filter_country}
             },
             columns: [
+              
     {
     data:'image',
     name:'image',

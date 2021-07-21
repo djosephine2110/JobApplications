@@ -18,8 +18,20 @@ use App\User;
 |
 */
 
-Route::get('/', function () {
+Route::get('/career', function () {
     return view('main');
+});
+
+Route::get('/', function () {
+    return view('index');
+});
+
+Route::get('/gallery', function () {
+    return view('gal');
+});
+
+Route::get('/video', function () {
+    return view('video');
 });
 Route::get('/details/{id}', 'JobpostingController@show');
 Route::get('/jobposting', 'JobpostingController@index');

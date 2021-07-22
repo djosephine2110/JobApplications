@@ -29,8 +29,8 @@
                 </div>
             </div>
             <div class="landingImage2" data-aos="fade-down" data-aos-duration="2000">
-                <img src="https://image.freepik.com/free-vector/people-waving-hand-illustration-concept_52683-29825.jpg"
-                    alt="" width="300" height="300">
+                <img src="https://cdn.erakomp.co.id/assets/6683.jpg" alt="" width="300" height="300">
+
             </div>
         </div>
 
@@ -183,8 +183,8 @@
         <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
             <h1 style="color:#3d4747;">Get To know <br> <span style="color:#2f8be0;font-size:3vw">Our Mission</span>
             </h1>
-            <img src="https://image.freepik.com/free-vector/plagiarism-concept-having-idea-stolen_23-2148704330.jpg"
-                alt="" style="width: 350px; height:350px; margin-top:20%;">
+            <img src="https://cdn.erakomp.co.id/assets/20945366.jpg" alt=""
+                style="width: 350px; height:350px; margin-top:20%;">
         </div>
         <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
             <ol>
@@ -207,8 +207,8 @@
         <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
             <h1 style="color:#3d4747;">Get To Know <br> <span style="color:#2f8be0;font-size:3vw">Our Vision</span>
             </h1>
-            <img src="https://image.freepik.com/free-vector/partners-doing-jigsaw-puzzle-flat-illustration_74855-5277.jpg"
-                alt="" style="width: 350px; height:350px; margin-top:25%;">
+            <img src="https://cdn.erakomp.co.id/assets/10820.jpg" alt=""
+            style="width: 350px; height:350px; margin-top:25%;">
         </div>
         <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
             <ol>

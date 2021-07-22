@@ -77,10 +77,10 @@
                             </div>
                         </li>
 
-                        <div class="nav-item">
+                        <!--<div class="nav-item">
                             <a target="_blank" href=" {{route('resume.index')}} " class="btn btn-primary ml-3"> View</a>
                         </div>
-
+                    -->
 
 
 
@@ -135,7 +135,7 @@
                                 <li class="breadcrumb-item {{ request()->is('reference') ? 'active' : '' }}"><a
                                     href="{{route('reference.index')}}">Referensi</a></li>
                                     <li class="breadcrumb-item {{ request()->is('married') ? 'active' : '' }}"><a
-                                        href="{{route('married.create')}}">Status</a></li>
+                                        href="{{route('married.index')}}">Status</a></li>
                                         <li class="breadcrumb-item {{ request()->is('anak') ? 'active' : '' }}"><a
                                             href="{{route('anak.index')}}">Anak</a></li>
                                             <li class="breadcrumb-item {{ request()->is('relation') ? 'active' : '' }}"><a

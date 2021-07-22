@@ -16,7 +16,7 @@ class UserDetailController extends Controller
     {
         $details = auth()->user()->details;
 
-        return view('user_detail.create', compact('details'));
+        return view('user_detail.index', compact('details'));
     }
 
     /**

@@ -3,10 +3,8 @@
 @section('content')
 
 <h2>Pekerjaan yang dilamar</h2>
-<div class="mt-2">
-    <a href=" {{route('job.create')}} " class="btn btn-primary mb-3">+ Pekerjaan yang dilamar</a>
-</div>
-@foreach($jobs as $e)
+
+@forelse($jobs as $e)
 
 <div class="card mb-2" style="background-color:rgba(255, 255, 255, 0.788);">
     <div class="card-body">
@@ -31,9 +29,11 @@
 
     </div>
 </div>
-
-
-@endforeach
+@empty
+<div class="mt-2">
+  <a href=" {{route('job.create')}} " class="btn btn-primary mb-3">+ Pekerjaan yang dilamar</a>
+</div>
+@endforelse
 
 
 <div class="text-right">

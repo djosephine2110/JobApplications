@@ -13,7 +13,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
               <label for="company_name">Nama Posisi yang diinginkan</label>
-              <input type="text" class="form-control" name="job_name" id="name" >
+              <input type="text" class="form-control" name="job_name" id="name" value="{{Auth::user()->category}}">
             </div>
             <div class="form-group col-md-6">
               <label for="position">Posisi</label>

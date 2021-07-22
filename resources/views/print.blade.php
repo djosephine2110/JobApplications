@@ -30,13 +30,7 @@
     <div class="container">
         <br>
         <br>
-        @if(isset(Auth::user()->image))
-            
-        <img src="{{asset('/storage/images/'.Auth::user()->image)}}" alt="" class="img-thumbnail d-flex justify-content-right" style="max-width: 200px; float:right; margin-top:30%;" >
-        @else
-        <img src="https://www.seekpng.com/png/full/245-2454602_tanni-chand-default-user-image-png.png" alt="" class="img-thumbnail d-flex justify-content-right" style="max-width: 200px; float:right; margin-top:30%;" >
-            
-        @endif
+        
         <section class="heading">
             @foreach($user->details->take(1) as $e)
             <h2 class="text-center"><b>Application of {{$e->name}}</b></h2>
@@ -123,7 +117,7 @@
 
           <h2><b>Status Pernikahan</b></h2>
 
-          @foreach($user->marrieds->take(1) as $m)
+          @foreach($user->marrieds as $m)
           
           <p><b>Status: </b>{{$m->married_status}} </p>
           <p><b>Nama Pasangan: </b>{{$m->spouse_name ?? 'tidak ada'}}  </p>

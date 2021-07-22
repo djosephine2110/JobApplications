@@ -5,7 +5,7 @@
 <h2>Status</h2>
 <div class="mt-2">
 </div>
-@foreach($marrieds as $e)
+@forelse($marrieds as $e)
 
 <div class="card mb-2" style="background-color:rgba(255, 255, 255, 0.788);">
     <div class="card-body">
@@ -31,8 +31,12 @@
     </div>
 </div>
 
+@empty
+<div class="mt-2">
+  <a href=" {{route('married.create')}} " class="btn btn-primary mb-3">+ Status</a>
+</div>
 
-@endforeach
+@endforelse
 
 
 <div class="text-right">

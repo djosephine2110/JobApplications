@@ -13,7 +13,7 @@ class ResumeController extends Controller
 
     public function index()
     {
-        $user = auth()->user();
+        $user = auth()->user()->first();
 
         // return view('resume_simple', compact('user'));
         return view('resume-ref', compact('user'));
@@ -24,7 +24,7 @@ class ResumeController extends Controller
     {
         $user = auth()->user();
 
-        $pdf = \PDF::loadView('resume-ref', compact('user'));
+        $pdf = \PDF::loadView('print', compact('user'));
         return $pdf->download('resume.pdf');
     }
 }

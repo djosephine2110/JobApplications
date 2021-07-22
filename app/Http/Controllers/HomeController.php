@@ -46,7 +46,7 @@ class HomeController extends Controller
             $request->file->storeAs('files', $filename, 'public');
             Auth()->user()->update(['file'=>$filename]);
         }
-        return view('user_detail.create');
+        return view('user-detail.index');
     }
 
     public function changeStatus(Request $request)

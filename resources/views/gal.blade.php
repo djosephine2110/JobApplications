@@ -11,7 +11,7 @@
 
         <a href="/gallery" class="mainlink">Gallery</a>
         <a href="/video">Testimony</a>
-        <a href="/career">Career</a>
+        <a href="/jobposting">Career</a>
       </div>
     </div>
 

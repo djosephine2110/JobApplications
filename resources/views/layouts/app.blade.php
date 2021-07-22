@@ -148,8 +148,7 @@
                                                             href="{{route('job.index')}}">Pekerjaan yang dilamar</a></li>
                                                             <li class="breadcrumb-item {{ request()->is('connection') ? 'active' : '' }}"><a
                                                                 href="{{route('connection.index')}}">Rekomendasi Dari Perusahaan</a></li>
-                            <li class="breadcrumb-item {{ request()->is('image') ? 'active' : '' }}"><a
-                                href="{{route('image.create')}}">Gambar Profile</a></li>
+                            
                                 
 
                 </ol>
@@ -158,15 +157,7 @@
 
             {{-- validation error section --}}
             <div>
-                @if(session()->has('errors'))
-                <ol class="alert alert-danger" role="alert">
-                    @foreach($errors->all() as $e)
-
-                    <li>{{$e}}</li>
-
-                    @endforeach
-                </ol>
-                @endif
+               
             </div>
 
             @yield('content')

@@ -145,7 +145,7 @@
                                                     <li class="breadcrumb-item {{ request()->is('health') ? 'active' : '' }}"><a
                                                         href="{{route('health.create')}}">Kesehatan</a></li>
                                                         <li class="breadcrumb-item {{ request()->is('job') ? 'active' : '' }}"><a
-                                                            href="{{route('job.index')}}">Pekerjaan yang dilamar</a></li>
+                                                            href="{{route('kerjaan.index')}}">Pekerjaan yang dilamar</a></li>
                                                             <li class="breadcrumb-item {{ request()->is('connection') ? 'active' : '' }}"><a
                                                                 href="{{route('connection.index')}}">Rekomendasi Dari Perusahaan</a></li>
                             

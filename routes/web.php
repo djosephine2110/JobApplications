@@ -92,6 +92,7 @@ Route::resource('post', 'PostController')->middleware('auth');
 
 Route::resource('reference', 'ReferenceController')->middleware('auth');
 Route::resource('relation', 'RelationController')->middleware('auth');
+Route::resource('kerjaan', 'KerjaanController')->middleware('auth');
 
 Route::resource('asing', 'AsingController')->middleware('auth');
 Route::resource('image', 'ImageController')->middleware('auth');

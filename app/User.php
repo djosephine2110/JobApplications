@@ -81,6 +81,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Reference::class);
     }
+    public function kerjaans()
+    {
+        return $this->hasMany(Kerjaan::class);
+    }
     public function files()
     {
         return $this->hasMany(File::class);

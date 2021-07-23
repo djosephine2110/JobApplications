@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Job;
+use App\Kerjaan;
 
-class JobController extends Controller
+class KerjaanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +15,9 @@ class JobController extends Controller
      */
     public function index()
     {
-        $jobs = auth()->user()->jobs;
+        $kerjaans = auth()->user()->kerjaans;
 
-        return view('job.index', compact('jobs'));
+        return view('kerjaan.index', compact('kerjaans'));
     }
 
     /**
@@ -26,7 +27,7 @@ class JobController extends Controller
      */
     public function create()
     {
-        return view('job.create');
+        return view('kerjaan.create');
     }
 
     /**
@@ -48,9 +49,9 @@ class JobController extends Controller
 
         // $formData = $request->except('_token');
 
-        auth()->user()->jobs()->create($formData);
+        auth()->user()->kerjaans()->create($formData);
 
-        return back();
+        return redirect()->route('kerjaan.index');
     }
 
     /**
@@ -70,9 +71,9 @@ class JobController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Job $job)
+    public function edit(Kerjaan $kerjaan)
     {
-        return view('job.edit', compact('job'));
+        return view('kerjaan.edit', compact('kerjaan'));
     }
 
     /**
@@ -82,7 +83,7 @@ class JobController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Job $job)
+    public function update(Request $request, Kerjaan $kerjaan)
     {
         $request->validate([
             'job_name' => 'required',
@@ -90,11 +91,12 @@ class JobController extends Controller
             'job_salary' => 'required',
             'job_facilities' => 'required',
             'job_starts' => 'required',
+            
         ]);
 
-        $job->update($request->all());
+        $kerjaan->update($request->all());
 
-        return redirect()->route('job.index');
+        return redirect()->route('kerjaan.index');
     }
 
     /**
@@ -103,9 +105,9 @@ class JobController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Job $job)
+    public function destroy(Kerjaan $kerjaan)
     {
-        $job->delete();
+        $kerjaan->delete();
 
         return back();
     }

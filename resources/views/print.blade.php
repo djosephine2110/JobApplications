@@ -238,7 +238,7 @@
 
         <h2><b>Informasi Pekerjaan Yang Dilamar</b></h2>
 
-        @foreach($user->connections as $m)
+        @foreach($user->kerjaans as $m)
         
         <p style="font-size: 15px;"><b>{{$m->job_name}}</b></p>
         <p><b>Jabatan yang diinginkan: </b>{{$m->job_position ?? 'tidak ada'}} </p>

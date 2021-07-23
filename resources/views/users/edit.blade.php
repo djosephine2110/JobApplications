@@ -25,9 +25,13 @@
             <form method="post" action="{{ route('users.update', $user->id) }}" id="myForm">
             @csrf
             @method('PUT')
+            <img class="image img-thumbnail mb-3" src="/storage/images/{{$user->image}}" alt="profile_image" style="max-width:300px;">
+
                 <div class="form-group">
+
                     <label for="name">Name: </label>                    
                     <label for="">{{$user->name}}</label>  
+                    
                 </div>
                 <br>
                 <div class="form-group">

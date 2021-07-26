@@ -13,7 +13,7 @@ class ResumeController extends Controller
 
     public function index()
     {
-        $user = auth()->user()->first();
+        $user = auth()->user();
 
         // return view('resume_simple', compact('user'));
         return view('resume-ref', compact('user'));

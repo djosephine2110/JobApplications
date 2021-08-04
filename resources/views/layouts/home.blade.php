@@ -98,7 +98,7 @@
         </nav>
 
 
-        <main class="py-4 container">
+        <!--<main class="py-4 container">
 
             @auth
             <nav aria-label="breadcrumb">
@@ -136,7 +136,7 @@
 
                 </ol>
             </nav>
-            @endauth
+            @endauth-->
 
             {{-- validation error section --}}
             <div>

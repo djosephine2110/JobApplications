@@ -46,7 +46,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto w-100 justify-content-end">
-
+            <li class="nav-item">
+              <a class="btn btn-singin" href="{{ route('login') }}">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-singin" href="{{ route('register') }}">Register</a>
+            </li>
             <li class="nav-item">
               <a class="btn btn-singin" href="/">Back To Home</a>
             </li>

@@ -59,8 +59,8 @@
         <div class="col-lg-6 col-md-12 col-xs-12">
           <div class="contents">
             <h2 class="head-title">Welcome To Erakomp Career Site</h2>
-            <p>Discover more about ERAKOMP. Whether you're starting or continuing your career, explore how you can
-              work with us.</p>
+            <p>Let's join our team! We nee more people like you to be part of Erakomp Family.<br> Please click apply
+              button on the top or you can explore job openings below.</p>
             <div class="header-button">
 
               <a href="/career" rel="nofollow" target="_blank"
@@ -80,34 +80,7 @@
 
 
 
-  <section id="business-plan">
-    <div class="container">
-
-      <div class="row">
-        <!-- Start Col -->
-        <div class="col-lg-6 col-md-12 pl-0 pt-70 pr-5">
-          <div class="business-item-img">
-              
-            <img src="https://cdn.erakomp.co.id/compro/img/5378405.jpg" class="img-fluid" alt=""
-              style="margin-top: -40%;">
-          </div>
-        </div>
-        <!-- End Col -->
-        <!-- Start Col -->
-        <div class="col-lg-6 col-md-12 pl-4">
-          <div class="business-item-info" style="margin-top: 5%;">
-            <h3>Hey yous,</h3>
-            <p>Let's join our team! We nee more people like you to be part of Erakomp Family.<br> Please click apply
-              button on the top or you can explore job openings below.</p>
-
-          </div>
-        </div>
-        <!-- End Col -->
-
-      </div>
-    </div>
-  </section>
-  <!-- Business Plan Section End -->
+  
 
 
 

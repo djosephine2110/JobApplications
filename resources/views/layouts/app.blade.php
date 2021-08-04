@@ -24,6 +24,13 @@
         .active {
             font-weight: bolder;
         }
+        .breadcrumb-item.active{
+            font-weight: bold;
+            text-decoration: underline;
+            border-radius: 50px;
+            font-size:15px;
+            background-color:white;
+        }
     </style>
 </head>
 
@@ -144,7 +151,7 @@
                                                     href="{{route('organization.index')}}">Organisasi</a></li>
                                                     <li class="breadcrumb-item {{ request()->is('health') ? 'active' : '' }}"><a
                                                         href="{{route('health.create')}}">Kesehatan</a></li>
-                                                        <li class="breadcrumb-item {{ request()->is('job') ? 'active' : '' }}"><a
+                                                        <li class="breadcrumb-item {{ request()->is('kerjaan') ? 'active' : '' }}"><a
                                                             href="{{route('kerjaan.index')}}">Pekerjaan yang dilamar</a></li>
                                                             <li class="breadcrumb-item {{ request()->is('connection') ? 'active' : '' }}"><a
                                                                 href="{{route('connection.index')}}">Rekomendasi Dari Perusahaan</a></li>

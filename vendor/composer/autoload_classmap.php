@@ -40,6 +40,7 @@ return array(
     'App\\Http\\Controllers\\ImageController' => $baseDir . '/app/Http/Controllers/ImageController.php',
     'App\\Http\\Controllers\\JobController' => $baseDir . '/app/Http/Controllers/JobController.php',
     'App\\Http\\Controllers\\JobpostingController' => $baseDir . '/app/Http/Controllers/JobpostingController.php',
+    'App\\Http\\Controllers\\KerjaanController' => $baseDir . '/app/Http/Controllers/KerjaanController.php',
     'App\\Http\\Controllers\\LanguageController' => $baseDir . '/app/Http/Controllers/LanguageController.php',
     'App\\Http\\Controllers\\MarriedController' => $baseDir . '/app/Http/Controllers/MarriedController.php',
     'App\\Http\\Controllers\\OrganizationController' => $baseDir . '/app/Http/Controllers/OrganizationController.php',

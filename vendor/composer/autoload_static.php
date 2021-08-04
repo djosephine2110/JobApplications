@@ -562,6 +562,7 @@ class ComposerStaticInit93fce3df6cdd07c957fe729951e6d28f
         'App\\Http\\Controllers\\ImageController' => __DIR__ . '/../..' . '/app/Http/Controllers/ImageController.php',
         'App\\Http\\Controllers\\JobController' => __DIR__ . '/../..' . '/app/Http/Controllers/JobController.php',
         'App\\Http\\Controllers\\JobpostingController' => __DIR__ . '/../..' . '/app/Http/Controllers/JobpostingController.php',
+        'App\\Http\\Controllers\\KerjaanController' => __DIR__ . '/../..' . '/app/Http/Controllers/KerjaanController.php',
         'App\\Http\\Controllers\\LanguageController' => __DIR__ . '/../..' . '/app/Http/Controllers/LanguageController.php',
         'App\\Http\\Controllers\\MarriedController' => __DIR__ . '/../..' . '/app/Http/Controllers/MarriedController.php',
         'App\\Http\\Controllers\\OrganizationController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrganizationController.php',

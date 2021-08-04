@@ -33,9 +33,10 @@
 @endforeach
 
 
-<div class="text-right">
-    <a class=" btn btn-primary mt-3" href=" {{route('image.create')}} " role="button">Next</a>
+<div class="row mt-3">
+    <div class="col text-left">
+        <a class="btn btn-secondary" href=" {{route('kerjaan.index')}} " role="button">Back</a>
+    </div>
 </div>
-
 
 @endsection

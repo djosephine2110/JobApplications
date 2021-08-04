@@ -12,7 +12,7 @@
 
         <div class="form-group col-md-6">
             <label for="language">Bahasa </label>
-            <select id="inputState" class="form-control" name="language">
+            <select id="inputState" class="form-control @error('language') is-invalid @enderror" name="language" value="{{ old('language') }}" required autocomplete="language">
               <option value="">Choose...</option>
               <option value="Abkhazian">Abkhazian</option>
             <option value="Afar">Afar</option>
@@ -205,23 +205,33 @@
             <option value="Zhuang, Chuang">Zhuang, Chuang</option>
             <option value="Zulu">Zulu</option>
   
-            </select>                
+            </select>   
+            @error('language')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+          @enderror   
           </div>
 
           <div class="form-group col-md-6">
             <label for="speaking">Bicara </label>
-            <select id="inputState" class="form-control" name="speaking">
+            <select id="inputState" class="form-control @error('speaking') is-invalid @enderror" name="speaking" value="{{ old('speaking') }}" required autocomplete="speaking">
               <option value="">Choose...</option>
               <option value="Baik">Baik</option>
             <option value="Cukup">Cukup</option>
             <option value="Kurang">Kurang</option>
             
   
-            </select>                
+            </select>   
+            @error('speaking')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+          @enderror             
           </div>
           <div class="form-group col-md-6">
             <label for="reading">Membaca </label>
-            <select id="inputState" class="form-control" name="reading">
+            <select id="inputState" class="form-control"@error('reading') is-invalid @enderror name="reading" value="{{ old('reading') }}" required autocomplete="reading">
               <option value="">Choose...</option>
               <option value="Baik">Baik</option>
             <option value="Cukup">Cukup</option>
@@ -232,7 +242,7 @@
           </div>
           <div class="form-group col-md-6">
             <label for="writing">Menulis </label>
-            <select id="inputState" class="form-control" name="writing">
+            <select id="inputState" class="form-control"@error('writing') is-invalid @enderror name="writing" value="{{ old('writing') }}" required autocomplete="writing">
               <option value="">Choose...</option>
               <option value="Baik">Baik</option>
             <option value="Cukup">Cukup</option>

@@ -54,17 +54,12 @@
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="gender">Jenis Kelamin</label>
-          <br>
-          <div class="form-check form-check-inline @error('gender') is-invalid @enderror" value="{{ old('gender') }}" required autocomplete="gender">
-            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Laki-Laki">
-           
-            <label class="form-check-label" for="Laki-laki">Laki-laki</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Perempuan">
+          <select id="inputState" name="gender" class="form-control @error('gender') is-invalid @enderror" value="{{ old('gender') }}" required autocomplete="gender">
+            <option value="{{ old('gender') }}" required autocomplete="gender">{{ old('gender') ?? 'Silahkan Pilih' }}</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+            </select>    
           
-            <label class="form-check-label" for="Perempuan">Perempuan</label>
-          </div>
           @error('gender')
           <span class="invalid-feedback" role="alert">
               <strong>{{ $message }}</strong>

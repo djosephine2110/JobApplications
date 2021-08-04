@@ -32,7 +32,7 @@
 
 <div class="row mt-3">
     <div class="col text-left">
-        <a class="btn btn-secondary" href=" {{route('education.create')}} " role="button">Back</a>
+        <a class="btn btn-secondary" href=" {{route('user-detail.index')}} " role="button">Back</a>
     </div>
 
     <div class="col text-right">

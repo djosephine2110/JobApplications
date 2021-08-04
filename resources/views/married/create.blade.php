@@ -13,7 +13,7 @@
     <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail4">Status Pernikahan</label>
-          <select id="inputState" name="married_status" class="form-control">
+          <select id="inputState" name="married_status" class="form-control @error('married_status') is-invalid @enderror" value="{{ old('married_status') }}" required autocomplete="married_status">
             <option value="" selected>Choose...</option>
             <option value="Belum Menikah">Belum Menikah</option>
             <option value="Menikah">Menikah</option>
@@ -23,7 +23,7 @@
         </div>
         <div class="form-group col-md-6">
           <label for="inputPassword4">Nama Pasangan</label>
-          <input type="text" name="spouse_name" class="form-control" id="inputPassword4" placeholder="">
+          <input type="text" name="spouse_name" class="form-control " id="inputPassword4" placeholder="">
         </div>
       </div>
 
@@ -53,7 +53,7 @@
           </select>            </div>
         <div class="form-group col-md-6">
           <label for="inputPassword4">Pekerjaan</label>
-          <input type="text" name="spouse_job" class="form-control" id="inputPassword4" placeholder="">
+          <input type="text" name="spouse_job" class="form-control" id="inputPassword4" placeholder="" >
         </div>
       </div>
     

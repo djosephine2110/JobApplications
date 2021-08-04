@@ -34,9 +34,14 @@
 @endforeach
 
 
-<div class="text-right">
-    <a class=" btn btn-primary mt-3" href=" {{route('reference.index')}} " role="button">Next</a>
-</div>
+<div class="row mt-3">
+    <div class="col text-left">
+        <a class="btn btn-secondary" href=" {{route('skill.index')}} " role="button">Back</a>
+    </div>
 
+    <div class="col text-right">
+        <a class=" btn btn-primary" href=" {{route('reference.index')}} " role="button">Next</a>
+    </div>
+</div>
 
 @endsection

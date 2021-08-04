@@ -33,8 +33,14 @@
 
 
 
-<div class="text-right">
-    <a class=" btn btn-primary" href=" {{route('asing.index')}} " role="button">Next</a>
+<div class="row mt-3">
+    <div class="col text-left">
+        <a class="btn btn-secondary" href=" {{route('experience.index')}} " role="button">Back</a>
+    </div>
+
+    <div class="col text-right">
+        <a class=" btn btn-primary" href=" {{route('asing.index')}} " role="button">Next</a>
+    </div>
 </div>
 
 

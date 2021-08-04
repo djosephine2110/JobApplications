@@ -7,8 +7,13 @@
             <div class="card" style="background-color:rgba(255, 255, 255, 0.788);">
                 <div class="card-header">ERA CAREER</div>
                 <div class="card-body">
+                    
                     <h2>Hi {{Auth::user()->name}},</h2>
-                    <p>Tolong upload gambar profile anda untuk melanjutkan ke proses selanjutnya, atau jika sudah memiliki gambar profile anda bisa melanjutkan ke halaman selanjutnya. Jika tidak meng-upload CV anda, maka aplikasi anda dianggap belum lengkap.</p>
+                    @if(Auth::user()->image !== NULL)
+                    <p>Anda telah mengupload foto dan CV anda. Silahkan klik 'next' untuk ke halaman selanjutnya, atau anda bisa mengupdate foto dan CV anda dengan klik 'choose file'.</p>
+                    @else 
+                    <p>Anda belum memiliki foto dan CV. Silahkan mengunduh foto dan CV anda untuk melanjutkan ke halaman selanjutnya.</p>
+                    @endif
                 </div>
                 <div class="card-body">
                     <form action="{{route('home')}}" method="POST" enctype="multipart/form-data">

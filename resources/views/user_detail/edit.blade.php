@@ -4,7 +4,7 @@
 <div class="card mb-2" style="background-color:rgba(255, 255, 255, 0.788);">
   <div class="card-body">
 <div class="container">
-    <h2>Edit Referensi</h2>
+    <h2>Edit Data Diri</h2>
 
     <form action="{{route('user-detail.update', $userDetail)}}" method='POST'>
         @csrf
@@ -39,18 +39,12 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="gender">Jenis Kelamin</label>
-            <br>
-            <div class="form-check form-check-inline" >
-              <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Laki-laki" {{ $userDetail->gender == 'Laki-laki' ? 'checked' : ''}}>
-             
-              <label class="form-check-label" for="Laki-laki">Laki-laki</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Perempuan" {{ $userDetail->gender == 'Perempuan' ? 'checked' : ''}}>
+            <select id="inputState" name="gender" class="form-control @error('gender') is-invalid @enderror" value="{{ old('gender') }}" required autocomplete="gender">
+              <option value="{{$userDetail->gender}}" >{{$userDetail->gender}}</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+              </select>    
             
-              <label class="form-check-label" for="Perempuan">Perempuan</label>
-            </div>
-           
           </div>
           <div class="form-group col-md-6">
             <label for="religion">Agama</label>

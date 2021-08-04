@@ -102,9 +102,14 @@
 @endforelse
 
 
-<div class="text-right">
-    <a class=" btn btn-primary mt-3" href=" {{route('skill.index')}} " role="button">Next</a>
+<div class="row mt-3">
+  
+
+  <div class="col text-right">
+      <a class=" btn btn-primary" href=" {{route('education.index')}} " role="button">Next</a>
+  </div>
 </div>
+
 
 
 @endsection

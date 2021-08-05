@@ -48,6 +48,12 @@
                         <option value="Screening In Progress">Screening In Progress</option>
                         <option value="Screening Completed">Screening Completed</option>
                         <option value="Additional Information Requested">Additional Information Requested</option>
+                        <option value="Declined Offer">Declined Offer</option>
+                        <option value="Department Not Filling Vacancy">Department Not Filling Vacancy</option>
+                        <option value="Hired">Hired</option>
+                        <option value="Incomplete Application">Incomplete Application</option>
+                        <option value="No Response From Candidate">No Response From Candidate</option>
+                        <option value="Withdrew">Withdrew</option>
 
                     </select>
                 </div>

@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->boolean('is_admin')->default('/images/default-avatar.jpg');
             $table->string('image')->default('user.png');
-            $table->string('status')->nullable()->default('On Hold');
+            $table->string('status')->nullable()->default('Not Opened');
 
             $table->rememberToken();
 

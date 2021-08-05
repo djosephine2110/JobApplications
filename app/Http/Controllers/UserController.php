@@ -65,7 +65,7 @@ class UserController extends Controller
         User::find($id)->update($request->all());
 
         //jika data berhasil diupdate, akan kembali ke halaman utama
-        return view('daterange')
+        return view('adminHome')
             ->with('success', 'User Berhasil Diupdate');
     }
 

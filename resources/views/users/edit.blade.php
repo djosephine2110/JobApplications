@@ -43,8 +43,11 @@
                     <label for="writer">Status</label>                    
                     <select name="status" id="" >
                         <option value="{{$user->status}}">{{$user->status}}</option>
-                        <option value="On Hold">On Hold</option>
-                        <option value="In Progress">In Progress</option>
+                        <option value="Not Opened">Not Opened</option>
+                        <option value="Opened">Opened</option>
+                        <option value="Screening In Progress">Screening In Progress</option>
+                        <option value="Screening Completed">Screening Completed</option>
+                        <option value="Additional Information Requested">Additional Information Requested</option>
 
                     </select>
                 </div>
